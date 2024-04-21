@@ -24,7 +24,7 @@ def get_lock(model_name_or_path: str, cache_dir: str):
     return lock
 
 
-def get_model(model_name_or_path: str, revision: str, cache_dir: str):
+def get_model(model_name_or_path: str, revision: str, cache_dir: str = os.getenv("HF_HUB_CACHE")):
     """
     Downloads or retrieves the model from cache.
 
